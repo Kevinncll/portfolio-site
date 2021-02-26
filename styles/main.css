@@ -213,6 +213,65 @@ h4{
 #image5{
     float: left;
     margin-top: 125px;
-    margin-bottom: 100px;
     margin-left: 20px;
+}
+
+/*image6*/
+#image6{
+    float: left;
+    margin-top: 150px;
+    margin-left: 20px;
+}
+
+/*image7*/
+#image7{
+    float: left;
+    margin-top: 150px;
+    margin-left: 20px;
+}
+
+/*image8*/
+#image8{
+    float: left;
+    margin-top: 150px;
+    margin-left: 20px;
+}
+
+/*textrow3*/
+#textrow3{
+    float: right;
+    border: black solid ;
+    background-color:#ffffff;
+    width: 70%;
+    height: auto;
+    font-size: 25px;
+    position: relative;
+    text-align: left;
+    vertical-align: center;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    margin-top: 150px;
+}
+
+/*textrow4*/
+#textrow4{
+    float: right;
+    border: black solid ;
+    background-color:#ffffff;
+    width: 70%;
+    height: auto;
+    font-size: 25px;
+    position: relative;
+    text-align: left;
+    vertical-align: center;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    margin-top: 150px;
+}
+
+/*rowthree*/
+#rowthree{
+    width: 100%;
 }
