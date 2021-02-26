@@ -4,6 +4,9 @@
     text-align: center;
 }
 
+.header{
+    margin-top: 12%;
+}
 
 /*site-navigation*/
 a:link, a:visited 
