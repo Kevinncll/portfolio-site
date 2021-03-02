@@ -309,6 +309,7 @@ h4{
     width: 100%;
 }
 
+/*boxstyle*/
 .box {
     display:inline-block;
     width:15%;
@@ -317,3 +318,35 @@ h4{
     vertical-align: top;
     padding: 2%;
 }
+
+/*buttonstyle*/
+.button {
+    background-color: #ffffff; 
+    border: none;
+    color: rgb(68, 68, 68);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+    border-radius: 30px; 
+    display: inline-block;
+    font-family: 'Noto Sans JP', sans-serif;
+  
+  }
+
+  /*center*/
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+
+  #buttonmargin{
+      margin-top: 10%;
+      margin-left: 30%;
+      margin-right: 30%;
+      margin-bottom: 10%;
+  }
