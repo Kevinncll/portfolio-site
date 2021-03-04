@@ -4,6 +4,7 @@
     text-align: center;
 }
 
+/*headermargin*/
 .header{
     margin-top: 12%;
 }
@@ -336,7 +337,7 @@ h4{
   
   }
 
-  /*center*/
+/*center*/
   .center {
     display: flex;
     justify-content: center;
@@ -344,6 +345,7 @@ h4{
     height: 200px;
   }
 
+  /*buttonmargin*/
   #buttonmargin{
       margin-top: 10%;
       margin-left: 30%;
