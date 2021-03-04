@@ -58,7 +58,7 @@ h1{
     background-color:#ffffff;
     width: 70%;
     height: auto;
-    font-size: 25px;
+    font-size: 20px;
     position: relative;
     text-align: left;
     vertical-align: center;
@@ -66,6 +66,7 @@ h1{
     padding-left: 15px;
     padding-bottom: 50px;
     margin-top: 75px;
+    font-family: 'Montserrat';
 }
 
 /*textrowbig*/
@@ -75,7 +76,7 @@ h1{
     background-color:#ffffff;
     width: 99%;
     height: auto;
-    font-size: 25px;
+    font-size: 20px;
     position: relative;
     text-align: left;
     vertical-align: center;
@@ -84,6 +85,7 @@ h1{
     padding-bottom: 50px;
     margin-top: 55px;
     margin-left: 20px;
+    font-family: 'Montserrat';
 }
 
 /*rowone*/
@@ -107,7 +109,7 @@ h1{
 /*image2*/
 #image2{
     float: right;
-    margin-top: 90px;
+    margin-top: 125px;
     margin-right: 25px;
 }
 
@@ -123,15 +125,17 @@ h2{
     border: black solid ;
     background-color:#ffffff;
     width: 70%;
-    height: auto;
-    font-size: 25px;
+    height: 250px;
+    font-size: 20px;
     position: relative;
     text-align: right;
     vertical-align: center;
-    padding-top: 50px;
+    align-self: center;
+    padding-top: 80px;
     padding-right: 15px;
     padding-bottom: 50px;
-    margin-top: 50px;
+    margin-top: 10px;
+    font-family: 'Montserrat';
 }
 
 /*spotify*/
@@ -246,7 +250,7 @@ h4{
 /*image5*/
 #image5{
     float: left;
-    margin-top: 105px;
+    margin-top: 95px;
     margin-left: 10px;
 }
 
@@ -338,17 +342,27 @@ h4{
   }
 
 /*center*/
-  .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-  }
+.center {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 200px;
+}
 
-  /*buttonmargin*/
-  #buttonmargin{
-      margin-top: 10%;
-      margin-left: 30%;
-      margin-right: 30%;
-      margin-bottom: 10%;
-  }
+/*buttonmargin*/
+#buttonmargin{
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 10%;
+}
+
+/*saywelcome*/
+#saywelcome{
+    color: white;
+}
+
+/*figcaption*/
+#figcaption{
+    color: white;
+}
