@@ -236,9 +236,9 @@ h4{
     height: auto;
     font-size: 25px;
     position: relative;
-    margin-right: 160px;
     padding-top: 25px;
     padding-bottom: 25px;
+    font-family: 'Montserrat';
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
