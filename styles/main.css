@@ -337,9 +337,8 @@ h4{
     cursor: pointer;
     border-radius: 30px; 
     display: inline-block;
-    font-family: 'Noto Sans JP', sans-serif;
-  
-  }
+    font-family: 'Montserrat';
+}
 
 /*center*/
 .center {
@@ -364,5 +363,10 @@ height: 200px;
 
 /*figcaption*/
 #figcaption{
+    color: white;
+}
+
+/*ComingSoon*/
+#comingsoon{
     color: white;
 }

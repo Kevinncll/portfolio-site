@@ -5,3 +5,8 @@ function welcome() {
     document.getElementById('saywelcome').innerHTML = message;
 
 }
+
+function comingsoon() {
+    alert("This Assignment Will Be Coming Soon");
+
+}
