@@ -1,3 +1,4 @@
+//WelcomeButton//
 function welcome() {
     let username = prompt("What is your name?");
     alert("Nice to meet you, " + username);
@@ -6,6 +7,7 @@ function welcome() {
 
 }
 
+//ComingSoon//
 function comingsoon() {
     alert("This Assignment Will Be Coming Soon");
 
