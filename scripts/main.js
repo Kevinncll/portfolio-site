@@ -51,3 +51,20 @@ function comingsoon8() {
 function comingsoon9() {
     alert("Assignment Ten Will Be Coming Soon");
 }
+
+//JavaScript Exercise 1//
+function largernumber(){
+    let num1 = parseInt(prompt("Enter the first number: "));
+    let num2 =  parseInt(prompt("Enter the second number: "));
+    let output = ""
+    if (num1 > num2){
+    output = num1;
+    } else if (num1 == num2){
+    output = "The numbers entered are equal";
+    } else if (num2 > num1){
+    output = num2;
+    } else {
+    output = "Invalid Output";
+    }
+    document.getElementById("largerNum").innerHTML = output;
+}
