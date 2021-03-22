@@ -7,46 +7,6 @@ function welcome() {
 
 }
 
-//ComingSoon//
-function comingsoon() {
-    alert("Assignment Two Will Be Coming Soon");
-}
-
-//ComingSoon2//
-function comingsoon2() {
-    alert("Assignment Three Will Be Coming Soon");
-}
-
-//ComingSoon3//
-function comingsoon3() {
-    alert("Assignment Four Will Be Coming Soon");
-}
-
-//ComingSoon4//
-function comingsoon4() {
-    alert("Assignment Five Will Be Coming Soon");
-}
-
-//ComingSoon5//
-function comingsoon5() {
-    alert("Assignment Six Will Be Coming Soon");
-}
-
-//ComingSoon6//
-function comingsoon6() {
-    alert("Assignment Seven Will Be Coming Soon");
-}
-
-//ComingSoon7//
-function comingsoon7() {
-    alert("Assignment Eight Will Be Coming Soon");
-}
-
-//ComingSoon8//
-function comingsoon8() {
-    alert("Assignment Nine Will Be Coming Soon");
-}
-
 //ComingSoon9//
 function comingsoon9() {
     alert("Assignment Ten Will Be Coming Soon");
@@ -76,11 +36,12 @@ function signOfProduct(){
     var c = parseInt(prompt("Place a number"));
     var totalProduct = a * b * c;
     if (totalProduct < 0 ){
-      alert("The sign of the product is -"); 
+      output = "The sign of the product is -"; 
     }
     if (totalProduct > 0 ){
-      alert("The sign of the product is +");  
+      output = "The sign of the product is +";  
     }
+    document.getElementById("SignProduct").innerHTML = output;
 }
 
 //JavaScript Exercise 3//
@@ -90,7 +51,8 @@ function threeNumberSort() {
     var c = parseInt(prompt("Place a number"));
     let array = [a, b, c];
     array.sort(function(a, b, c){return a - b});
-    alert ("The order from least to greatest is, " + array);
+    output = "The order from least to greatest is, " + array;
+    document.getElementById("LeastGreat").innerHTML = output;
 }
 
 //JavaScript Exercise 4//
@@ -99,7 +61,8 @@ function SumOfThrees() {
     for (let i = 0; i < 1000; i++) {
         ! (i % 3) && (sum += i)
     }
-    console.log(sum);
+    output = "The sum of three is, " + sum;
+    document.getElementById("SumThree").innerHTML = output;
 }
 
 //JavaScript Exercise 5//
@@ -110,7 +73,8 @@ function WhileThrees(){
          sum += i;
          i = i + 3;
      }
-     console.log(sum)
+     output = "The while of three is, " + sum;
+     document.getElementById("WhileThree").innerHTML = output;
 }
 
 //JavaScript Exercise 6//
@@ -139,7 +103,8 @@ function centuryFromYear() {
         if (toString(century)[-1] == 1) /*&& toString(century)[-1] !=11)*/{ 
            century = toString(century) + 'st'
     }
-    return alert ('The year you entered is in the century of ' + century);  
+    output = "The year you entered is in the century of " + century;
+    document.getElementById("Century").innerHTML = output;  
 }
 
 //JavaScript Exercise 8//
@@ -151,9 +116,12 @@ function thirdAngle() {
     if ((a + b) < 180){
     totalSum = 180 - (a + b); 
     alert ("The angle that is missing is, " + totalSum );
+    output = "The angle that is missing is, " + totalSum;
     }
     else if ((a + b) > 180){
-    alert ("Invalid. Enter two angles of a triangle.");    
+    alert ("Invalid. Enter two angles of a triangle."); 
+    output = "Invalid. Enter two angles of a triangle.";
     }
+    document.getElementById("Triangle").innerHTML = output;  
 }
 
