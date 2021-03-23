@@ -1,15 +1,12 @@
 //WelcomeButton//
 function welcome() {
     let username = prompt("What is your name?");
-    alert("Nice to meet you, " + username); //Alert Box//
-    let message = "Nice to meet you, " + username + "."; //Button Undertext//
-    document.getElementById('saywelcome').innerHTML = message;
-
+    output = "Nice to meet you, " + username + "."; //Button Undertext//
+    document.getElementById('saywelcome').innerHTML = output;
 }
 
 //ComingSoon9//
 function comingsoon9() {
-    alert("Assignment Ten Will Be Coming Soon."); //Alert Box//
     output = "Assignment Ten Will Be Coming Soon."; //Button Undertext//
     document.getElementById("assignmenten").innerHTML = output;
 }
@@ -21,14 +18,12 @@ function largerNumber(){
     let num2 =  parseInt(prompt("Enter the second number: "));
     let output = ""
     if (num1 > num2){ //If Num1 Is Greater Than Num2//
-        output = num1; //Output//
+        output = "The larger number is, " + num1 + "."; //Output//
     } else if (num1 == num2){ //If Num1 Is Equal To Num2//
-        alert ("The numbers entered are equal."); //Alert Box//
         output = "The numbers entered are equal."; //Button Undertext//
     } else if (num2 > num1){ //If Num2 Is Less Than Num1//
-        output = num2; //Output//
+        output = "The larger number is, " + num2 + "."; //Output//
     } else {
-        alert ("Invalid Output."); //Alert Box//
         output = "Invalid Output."; //Button Undertext//
     }
     document.getElementById("largerNum").innerHTML = output;
@@ -42,11 +37,9 @@ function signOfProduct(){
     var c = parseInt(prompt("Place a number"));
     var totalProduct = a * b * c; //Finding The Total Product//
     if (totalProduct < 0 ){
-      alert ("The sign of the product is -."); //Alert Box//
       output = "The sign of the product is -."; //Button Undertext//
     }
     if (totalProduct > 0 ){
-      alert ("The sign of the product is +."); //Alert Box//
       output = "The sign of the product is +."; //Button Undertext//
     }
     document.getElementById("SignProduct").innerHTML = output;
@@ -114,10 +107,7 @@ function centuryFromYear() {
     let userYear = prompt ('What century is this year is in? Enter any year.', '2021');
     let century = 0;
     century = Math.floor(userYear/100+1); 
-        if (toString(century)[-1] == 1){ //Find The Reason For This//
-        alert ("The year you entered is in the century of " + century + "."); //Alert Box//
         output = "The year you entered is in the century of " + century + "."; //Button Undertext//
-    }
     document.getElementById("Century").innerHTML = output;  
 }
 
@@ -130,11 +120,9 @@ function thirdAngle() {
     var totalSum = 0;
     if ((a + b) < 180){ //If Less Than 180//
     totalSum = 180 - (a + b); 
-        alert ("The angle that is missing is, " + totalSum + "."); //Alert Box//
         output = "The angle that is missing is, " + totalSum + "."; //Button Undertext//
     }
     else if ((a + b) > 180){ //If Greater Than 180//
-        alert ("Invalid. Enter two angles of a triangle."); //Alert Box//
         output = "Invalid. Enter two angles of a triangle."; //Button Undertext//
     }
     document.getElementById("Triangle").innerHTML = output;  
