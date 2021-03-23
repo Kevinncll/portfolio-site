@@ -67,8 +67,8 @@ function SumOfThrees() { //This Calculates The Sum Of Three//
     let sum = 0;
     for (let i = 0; i < 1000; i++) {
         ! (i % 3) && (sum += i)
-    }
     output = "The sum of three is, " + sum + "."; //Button Undertext//
+    }
     document.getElementById("SumThree").innerHTML = output;
 }
 
@@ -76,12 +76,12 @@ function SumOfThrees() { //This Calculates The Sum Of Three//
 function WhileThrees(){ //This Calculates The While Of Three//
     let sum = 0;
     let i = 0;
-     while (i < 1000) {
-         sum += i;
-         i = i + 3;
-     }
-     output = "The while of three is, " + sum + "."; //Button Undertext//
-     document.getElementById("WhileThree").innerHTML = output;
+    while (i < 1000) {
+        sum += i;
+        i = i + 3;
+    output = "The while of three is, " + sum + "."; //Button Undertext//
+    }
+    document.getElementById("WhileThree").innerHTML = output;
 }
 
 //JavaScript Exercise 6//
