@@ -13,7 +13,7 @@ function comingsoon9() {
 
 //JavaScript Exercise 1//
 function largerNumber(){ 
-    //This Identifies The Larger Number//
+    //This Identifies The Larger Number From The Input Of Two Numbers//
     let num1 = parseInt(prompt("Enter the first number: "));
     let num2 =  parseInt(prompt("Enter the second number: "));
     let output = ""
@@ -31,11 +31,11 @@ function largerNumber(){
 
 //JavaScript Exercise 2//
 function signOfProduct(){ 
-    //This Identifies The Signs Of A Product//
-    var a = parseInt(prompt("Place a number"));
-    var b = parseInt(prompt("Place a number"));
-    var c = parseInt(prompt("Place a number"));
-    var totalProduct = a * b * c; //Finding The Total Product//
+    //This Identifies The Signs Of A Product From The Total Product//
+    let a = parseInt(prompt("Place a number"));
+    let b = parseInt(prompt("Place a number"));
+    let c = parseInt(prompt("Place a number"));
+    let totalProduct = a * b * c; //Finding The Total Product//
     if (totalProduct < 0 ){
       output = "The sign of the product is -."; //Button Undertext//
     }
@@ -48,9 +48,9 @@ function signOfProduct(){
 //JavaScript Exercise 3//
 function threeNumberSort() { 
     //This Sorts Three Number Inputs, And Outputs Three From Least To Greatest//
-    var a = parseInt(prompt("Insert a number."));
-    var b = parseInt(prompt("Insert a number."));
-    var c = parseInt(prompt("Insert a number."));
+    let a = parseInt(prompt("Insert a number."));
+    let b = parseInt(prompt("Insert a number."));
+    let c = parseInt(prompt("Insert a number."));
     let array = [a, b, c];
     array.sort(function(a, b, c){return a - b});{
         output = "The order from least to greatest is, " + array + "."; //Button Undertext//
@@ -103,21 +103,21 @@ function tenFour() {
 
 //JavaScript Exercise 7//
 function centuryFromYear() { 
-    //This Calculates The Century Of A Year//
+    //This Calculates The Century Of A Year Using//
     let userYear = prompt ('What century is this year is in? Enter any year.', '2021');
     let century = 0;
-    century = Math.floor(userYear/100+1); 
-        output = "The year you entered is in the century of " + century + "."; //Button Undertext//
+    century = Math.floor(userYear/100+1);
+    output = "The year you entered is in the century of " + century + "."; //Button Undertext//
     document.getElementById("Century").innerHTML = output;  
 }
 
 //JavaScript Exercise 8//
 function thirdAngle() { 
-    //This Calculates The Missing Amount Adding Up To 180//
+    //Input Of Two Numbers To Find The Missing Number Adding To 180//
     alert ("Here you can calculate the missing angle of a triangle. You must put insert two angles of a triangle and the function will return the third angle, totaling 180°." );
-    var a = parseInt(prompt("Enter an angle of a triangle"));
-    var b = parseInt(prompt("Enter another angle of a triangle "));
-    var totalSum = 0;
+    let a = parseInt(prompt("Enter an angle of a triangle")); //Input Of First Number//
+    let b = parseInt(prompt("Enter another angle of a triangle ")); //Input Of Second Number//
+    let totalSum = 0;
     if ((a + b) < 180){ //If Less Than 180//
     totalSum = 180 - (a + b); 
         output = "The angle that is missing is, " + totalSum + "."; //Button Undertext//
