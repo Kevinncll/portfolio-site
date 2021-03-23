@@ -103,7 +103,7 @@ function tenFour() { //This Changes The Multiples Of 4,10 to FourTen//
 }
 
 //JavaScript Exercise 7//
-function centuryFromYear() { //This The Century Of A Year//
+function centuryFromYear() { //This Calculates The Century Of A Year//
     let userYear = prompt ('What century is this year is in? Enter any year.', '2021');
     let century = 0;
     century = Math.floor(userYear/100+1);
