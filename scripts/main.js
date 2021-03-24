@@ -52,7 +52,7 @@ function threeNumberSort() {
     let b = parseInt(prompt("Insert a number."));
     let c = parseInt(prompt("Insert a number."));
     let array = [a, b, c];
-    array.sort(function(a, b, c){return a - b});{
+    array.sort(function(a, b, c){return a - b});{ //Inverts Array To Be Least To Greatest//
         output = "The order from least to greatest is, " + array + "."; //Button Undertext//
     }
     document.getElementById("LeastGreat").innerHTML = output;
@@ -106,7 +106,7 @@ function centuryFromYear() {
     //This Calculates The Century Of A Year Using//
     let userYear = prompt ('What century is this year is in? Enter any year.', '2021');
     let century = 0;
-    century = Math.floor(userYear/100+1);
+    century = Math.floor(userYear/100+1); //Rounds To The Largest Interger//
     output = "The year you entered is in the century of " + century + "."; //Button Undertext//
     document.getElementById("Century").innerHTML = output;  
 }
