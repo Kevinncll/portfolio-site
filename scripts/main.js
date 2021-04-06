@@ -14,8 +14,8 @@ function comingsoon9() {
 //JavaScript Exercise 1//
 function largerNumber(){ 
     //This Identifies The Larger Number From The Input Of Two Numbers//
-    let num1 = parseInt(prompt("Enter the first number: "));
-    let num2 =  parseInt(prompt("Enter the second number: "));
+    let num1 = parseInt(prompt("Enter the first number: ")); //Input One//
+    let num2 =  parseInt(prompt("Enter the second number: ")); //Input Two//
     let output = ""
     if (num1 > num2){ //If Num1 Is Greater Than Num2//
         output = "The larger number is, " + num1 + "."; //Output//
@@ -23,7 +23,7 @@ function largerNumber(){
         output = "The numbers entered are equal."; //Button Undertext//
     } else if (num2 > num1){ //If Num2 Is Less Than Num1//
         output = "The larger number is, " + num2 + "."; //Output//
-    } else {
+    } else { //If Numerical Values Not Inputted//
         output = "Invalid Output."; //Button Undertext//
     }
     document.getElementById("largerNum").innerHTML = output;
@@ -32,14 +32,16 @@ function largerNumber(){
 //JavaScript Exercise 2//
 function signOfProduct(){ 
     //This Identifies The Signs Of A Product From The Total Product//
-    let a = parseInt(prompt("Place a number"));
-    let b = parseInt(prompt("Place a number"));
-    let c = parseInt(prompt("Place a number"));
+    let a = parseInt(prompt("Insert a number")); //Input One//
+    let b = parseInt(prompt("Insert a number")); //Input Two//
+    let c = parseInt(prompt("Insert a number")); //Input Three//
     let totalProduct = a * b * c; //Finding The Total Product//
     if (totalProduct < 0 ){
+      //If Less Than 0//
       output = "The sign of the product is -."; //Button Undertext//
     }
     if (totalProduct > 0 ){
+      //If Greater Than 0//
       output = "The sign of the product is +."; //Button Undertext//
     }
     document.getElementById("SignProduct").innerHTML = output;
@@ -48,9 +50,9 @@ function signOfProduct(){
 //JavaScript Exercise 3//
 function threeNumberSort() { 
     //This Sorts Three Number Inputs, And Outputs Three From Least To Greatest//
-    let a = parseInt(prompt("Insert a number."));
-    let b = parseInt(prompt("Insert a number."));
-    let c = parseInt(prompt("Insert a number."));
+    let a = parseInt(prompt("Insert a number.")); //Input One//
+    let b = parseInt(prompt("Insert a number.")); //Input Two//
+    let c = parseInt(prompt("Insert a number.")); //Input Three//
     let array = [a, b, c];
     array.sort(function(a, b, c){return a - b});{ //Inverts Array To Be Least To Greatest//
         output = "The order from least to greatest is, " + array + "."; //Button Undertext//
@@ -59,7 +61,7 @@ function threeNumberSort() {
 }
 
 //JavaScript Exercise 4//
-function SumOfThrees() { 
+function sumofThrees() { 
     //This Outputs The Sum Of The Multiples Of Threes Under 1000//
     let sum = 0;
     for (let i = 0; i < 1000; i++) { //Loop Of Multiples Of 3 Under 1000//
@@ -70,7 +72,7 @@ function SumOfThrees() {
 }
 
 //JavaScript Exercise 5//
-function WhileThrees(){ 
+function whileThrees(){ 
     //This Outputs The While Of Multiples Of Threes Under 1000//
     let sum = 0;
     let i = 0;
@@ -84,7 +86,7 @@ function WhileThrees(){
 
 //JavaScript Exercise 6//
 function tenFour() { 
-    //This Changes The Multiples Of 4,10 to FourTen//
+    //This Changes The Multiples Of 4,10 to Four,Ten//
     let multiples410 = 0;
      for(i = 1; i<101; i = i +1){
          if(i % 4 === 0 && i % 10 === 0){ //Multiples Of Ten And Four//
@@ -104,7 +106,7 @@ function tenFour() {
 //JavaScript Exercise 7//
 function centuryFromYear() { 
     //This Calculates The Century Of A Year Using//
-    let userYear = prompt ('What century is this year is in? Enter any year.', '2021');
+    let userYear = prompt ('What century is this year is in? Enter any year.', '2021'); //Input Of Year//
     let century = 0;
     century = Math.floor(userYear/100+1); //Rounds To The Largest Interger//
     output = "The year you entered is in the century of " + century + "."; //Button Undertext//
@@ -128,3 +130,30 @@ function thirdAngle() {
     document.getElementById("Triangle").innerHTML = output;  
 }
 
+//JavaScript Encrypt//
+function encrypt () {
+    //Returns Ciphertext After Input Of Plaintext//
+    let plaintext = prompt ("What is your message?");
+    let ciphertext = "";
+    let wordList = plaintext.split(" ");
+    for(let i = 0; i < wordList.length; i = i + 1) {
+        if (wordList[i].length >= 2){
+            ciphertext = ciphertext + wordList[i].slice(1) + wordList[i][0].replace("", "XyZ") + wordList[i][0] + "sh";
+    }
+    document.getElementById("Encrypt").innerHTML = ciphertext;
+}
+
+//JavaScript Decrypt//
+function decrypt () {
+    //Returns Plaintext After Input Of Ciphertext//
+    let ciphertext = prompt ("What is your ciphertext?");
+    let plaintext = "";
+    let wordList = ciphertext.split(" ");
+    for(let i = 0; i < wordList.length; i = i + 1) {
+        if (wordList[i].length >= 2){
+            plaintext = plaintext - wordList[i].slice(1) - ordList[i][0].replace("", "XyZ") - wordList[i][0] - "sh";
+    }
+    document.getElementById("Decrypt").innerHTML = plaintext;
+}
+}
+}
