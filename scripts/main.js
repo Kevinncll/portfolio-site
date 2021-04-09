@@ -131,29 +131,40 @@ function thirdAngle() {
 }
 
 //JavaScript Encrypt//
-function encrypt () {
-    //Returns Ciphertext After Input Of Plaintext//
-    let plaintext = prompt ("What is your message?");
-    let ciphertext = "";
-    let wordList = plaintext.split(" ");
-    for(let i = 0; i < wordList.length; i = i + 1) {
-        if (wordList[i].length >= 2){
-            ciphertext = ciphertext + wordList[i].slice(1) + wordList[i][0].replace("", "XyZ") + wordList[i][0] + "sh";
+function encrypt(){
+    //User Input Returns Encrypted Message//
+    let plaintext = prompt("Enter your message");
+    let ciphertext = ""; //Unencrypted Message//
+    wordList = plaintext.split(" "); 
+    for(let i = 0; i < wordList.length; i++){
+        if(wordList[i].length >= 2){
+            let firstletter = wordList[i][0]; 
+            let secondletter = wordList[i][1] 
+                ciphertext += "XyZ" + wordList[i].slice(1) + secondletter + firstletter + "&5%" + " ";
+            output = "Your encrypted message is, " + ciphertext;
+        }
     }
-    document.getElementById("Encrypt").innerHTML = ciphertext;
+    document.getElementById("Encrypt").innerHTML = output;
 }
 
 //JavaScript Decrypt//
-function decrypt () {
-    //Returns Plaintext After Input Of Ciphertext//
-    let ciphertext = prompt ("What is your ciphertext?");
-    let plaintext = "";
-    let wordList = ciphertext.split(" ");
-    for(let i = 0; i < wordList.length; i = i + 1) {
-        if (wordList[i].length >= 2){
-            plaintext = plaintext - wordList[i].slice(1) - ordList[i][0].replace("", "XyZ") - wordList[i][0] - "sh";
+function decrypt(){ 
+    //User Input Returns Decrypted Message//
+    let ciphertext = prompt("Enter your encrypted message")
+    let plaintext = ""; //Decrypted Message
+    ciphertext = ciphertext.split(" "); 
+    for(let i = 0; i < ciphertext.length; i = i + 1){
+        if(ciphertext[i].length >= 2){
+            ciphertext[i] = ciphertext[i].replace(/XyZ/g, "");
+            ciphertext[i] = ciphertext[i].replace(/&5%/g, ""); 
+                let firstLetterexception = ''; 
+                let textBody = "";
+                firstLetterexception = ciphertext[i].slice(-1)
+                textBody = (ciphertext[i]).slice(0, -2);
+                    plaintext += firstLetterexception + textBody + " ";
+                output = "Your message was, " + plaintext;
+        }
     }
-    document.getElementById("Decrypt").innerHTML = plaintext;
+    document.getElementById("Decrypt").innerHTML = output;
 }
-}
-}
+
