@@ -138,10 +138,11 @@ function encrypt(){
     wordList = plaintext.split(" "); 
     for(let i = 0; i < wordList.length; i++){
         if(wordList[i].length >= 2){
-            let firstletter = wordList[i][0]; 
-            let secondletter = wordList[i][1] 
-                ciphertext += "XyZ" + wordList[i].slice(1) + secondletter + firstletter + "&5%" + " ";
-            output = "Your encrypted message is, " + ciphertext;
+            let firstletter = wordList[i][0]; //Obtains First Letter From PlainText//
+            let secondletter = wordList[i][1] //Obtains Second Letter From PlainText//
+                ciphertext += "XyZ" + wordList[i].slice(1) + secondletter + firstletter + "&5%" + " "; 
+                //Combines XyZ + Sliced String + Second Letter + First Letter + &5% + Empty String//
+            output = "Your encrypted message is, " + ciphertext; //Button Undertext//
         }
     }
     document.getElementById("Encrypt").innerHTML = output;
@@ -151,18 +152,18 @@ function encrypt(){
 function decrypt(){ 
     //User Input Returns Decrypted Message//
     let ciphertext = prompt("Enter your encrypted message")
-    let plaintext = ""; //Decrypted Message
+    let plaintext = ""; //Decrypted Message//
+    let firstLetterexception = ""; //First Character Obtained From CipherText//
+    let textBody = ""; //Text Obtained From CipherText//
     ciphertext = ciphertext.split(" "); 
     for(let i = 0; i < ciphertext.length; i = i + 1){
         if(ciphertext[i].length >= 2){
-            ciphertext[i] = ciphertext[i].replace(/XyZ/g, "");
-            ciphertext[i] = ciphertext[i].replace(/&5%/g, ""); 
-                let firstLetterexception = ''; 
-                let textBody = "";
-                firstLetterexception = ciphertext[i].slice(-1)
-                textBody = (ciphertext[i]).slice(0, -2);
-                    plaintext += firstLetterexception + textBody + " ";
-                output = "Your message was, " + plaintext;
+            ciphertext[i] = ciphertext[i].replace(/XyZ/g, ""); //Replace XyZ String With Empty String//
+            ciphertext[i] = ciphertext[i].replace(/&5%/g, ""); //Replace &5% String With Empty String//
+            firstLetterexception = ciphertext[i].slice(-1) //Obtains First Character From CipherText//
+            textBody = (ciphertext[i]).slice(0, -2); //Removes Second Last Character From CipherText//
+                plaintext += firstLetterexception + textBody + " "; //Combines First Letter + TextBody + Empty String//
+            output = "Your message was, " + plaintext; //Button Undertext//
         }
     }
     document.getElementById("Decrypt").innerHTML = output;
