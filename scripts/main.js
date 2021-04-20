@@ -135,12 +135,13 @@ function encrypt(){
     //User Input Returns Encrypted Message//
     let plaintext = prompt("Enter your message");
     let ciphertext = ""; //Unencrypted Message//
-    wordList = plaintext.split(" "); 
+    wordList = plaintext.split(" "); //Creates Space In Between Words//
     for(let i = 0; i < wordList.length; i++){
         if(wordList[i].length >= 2){
-            let firstletter = wordList[i][0]; //Obtains First Letter From PlainText//
-            let secondletter = wordList[i][1] //Obtains Second Letter From PlainText//
-                ciphertext += "XyZ" + wordList[i].slice(1) + secondletter + firstletter + "&5%" + " "; 
+            let firstletter = wordList[i][0]; //Assigns And Obtains First Letter From PlainText//
+            let secondletter = wordList[i][1] //Assigns And Obtains Second Letter From PlainText//
+            wordList[i] = wordList[i].replace(/e/g, ">"); //Loops Replacement Of E Character From PlainText//
+            ciphertext += "XyZ" + wordList[i].slice(1) + secondletter + firstletter + "&5%" + " "; 
                 //Combines XyZ + Sliced String + Second Letter + First Letter + &5% + Empty String//
             output = "Your encrypted message is, " + ciphertext; //Button Undertext//
         }
@@ -153,16 +154,18 @@ function decrypt(){
     //User Input Returns Decrypted Message//
     let ciphertext = prompt("Enter your encrypted message")
     let plaintext = ""; //Decrypted Message//
-    let firstLetterexception = ""; //First Character Obtained From CipherText//
-    let textBody = ""; //Text Obtained From CipherText//
-    ciphertext = ciphertext.split(" "); 
+    ciphertext = ciphertext.split(" "); //Creates Space In Between Words//
     for(let i = 0; i < ciphertext.length; i = i + 1){
         if(ciphertext[i].length >= 2){
-            ciphertext[i] = ciphertext[i].replace(/XyZ/g, ""); //Replace XyZ String With Empty String//
-            ciphertext[i] = ciphertext[i].replace(/&5%/g, ""); //Replace &5% String With Empty String//
-            firstLetterexception = ciphertext[i].slice(-1) //Obtains First Character From CipherText//
-            textBody = (ciphertext[i]).slice(0, -2); //Removes Second Last Character From CipherText//
-                plaintext += firstLetterexception + textBody + " "; //Combines First Letter + TextBody + Empty String//
+            let firstLetterexception = ""; //First Character Obtained From CipherText//
+            let textBody = ""; //Text Obtained From CipherText//
+                ciphertext[i] = ciphertext[i].replace(/XyZ/g, ""); //Loops Replacement Of XyZ String With Empty String//
+                ciphertext[i] = ciphertext[i].replace(/&5%/g, ""); //Loops Replacement Of &5% String With Empty String//
+                ciphertext[i] = ciphertext[i].replace(/>/g, "e"); //Loops Replacement Of > Character From PlainText//
+                firstLetterexception = ciphertext[i].slice(-1) //Obtains First Character From CipherText//
+                textBody = (ciphertext[i]).slice(0, -2); //Removes Second Last Character From CipherText//
+            plaintext += firstLetterexception + textBody + " "; 
+                //Combines First Letter + TextBody + Empty String//
             output = "Your message was, " + plaintext; //Button Undertext//
         }
     }
