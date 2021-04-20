@@ -162,8 +162,8 @@ function decrypt(){
             wordList[i] = wordList[i].replace(/XyZ/g, ""); //Loops Replacement Of XyZ String With Empty String//
             wordList[i] = wordList[i].replace(/&5%/g, ""); //Loops Replacement Of &5% String With Empty String//
             wordList[i] = wordList[i].replace(/>/g, "e"); //Loops Replacement Of > Character From PlainText//
-                firstLetterexception = wordList[i].slice(-1) //Obtains First Character From CipherText//
-                textBody = (wordList[i]).slice(0, -2); //Removes Second Last Character From CipherText//
+            firstLetterexception = wordList[i].slice(-1) //Obtains First Character From CipherText//
+            textBody = (wordList[i]).slice(0, -2); //Removes Second Last Character From CipherText//
             plaintext += firstLetterexception + textBody + " "; 
                 //Combines First Letter + TextBody + Empty String//
             output = "Your message was, " + plaintext; //Button Undertext//
